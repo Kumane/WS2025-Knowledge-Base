@@ -23,13 +23,13 @@ This article demonstrates the process of adding a Windows Server 2025 Virtual Ma
 
 1. Open Proxmox WebGUI and sign in using appropriate credentials.
 2. Under Server View on left-hand side, click to expand *Datacenter* and then click to expand the appropriate *Node* 
-3.  Click *Create VM* !(./VMSelect.png)
+3.  Click *Create VM* ![VM Selection Image](./VMSelect.png)
 4. Set *VM ID* to chosen # within standard convention, set a name for the VM under *name* and then click Next
 5. Select *Use CD/DVD disc image file (iso)*, then select the storage device the Windows Server 2025 .iso is stored on, and select the appropriate .iso
 6. Under *Guest OS* on the right-hand side of the OS Tab, change *Type:* to *Microsoft Windows*, *Version* to *11/2022/2025*, and click the box for *Add additional drive for VirtIO drivers*
-	 **Failure to add VirtIO drivers will result in significant performance loss due to lack of paravirtualized access to devices and peripherals including: disk drives, network devices, and memory management** ![[OSSETUP.png]]
-7. Leave Graphic Card device as *Default* for now. Ensure *BIOS*  is set to *UEFI*, Check box to *Add EFI Disk*, add *EFI storage device*, Click to enable *QEMU guest Agent*,  Click to *Add TPM and TPM storage* and verify usage of *TPM v2.0* ![[SYSTEM.png]]
-8. Under Disks tab, set *Bus/Device* to SATA, select storage location and allocate appropriate Disk size.![[Disks.png]]
+	 **Failure to add VirtIO drivers will result in significant performance loss due to lack of paravirtualized access to devices and peripherals including: disk drives, network devices, and memory management** ![OS TAB](./OSSETUP.png)
+7. Leave Graphic Card device as *Default* for now. Ensure *BIOS*  is set to *UEFI*, Check box to *Add EFI Disk*, add *EFI storage device*, Click to enable *QEMU guest Agent*,  Click to *Add TPM and TPM storage* and verify usage of *TPM v2.0* ![SYSTEM TAB](./SYSTEM.png)
+8. Under Disks tab, set *Bus/Device* to SATA, select storage location and allocate appropriate Disk size.![DISKS TAB](./Disks.png)
 9. Set CPU type to *host* and allocate at minimum 4 CPU cores for optimal performance.![[CPU.png]]
 10. Allocated at least **4GB** of memory to the VM for perfomance ![[MEMORY.png]]
 11. Set the first NIC (Network Interface Controller) to use the Linux bridge that is connected to the internet. In this case, vmbr0 connects the Proxmox hypervisor 192.168.0.14/24 to the default gateway of 192.168.0.1. (Linux bridge interfaces can be thought of as virtual switches that connect guests to physical interfaces.)![[Network.png]]
