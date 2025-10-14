@@ -40,7 +40,7 @@ This article demonstrates the process of adding a Windows Server 2025 Virtual Ma
 11. Set the first NIC (Network Interface Controller) to use the Linux bridge that is connected to the internet. In this case, vmbr0 connects the Proxmox hypervisor 192.168.0.14/24 to the default gateway of 192.168.0.1. (Linux bridge interfaces can be thought of as virtual switches that connect guests to physical interfaces.)![NETOWRK TAB](Network.png)
 
 12. Confirm VM creation and then Click Start to boot the Virtual Machine
-13. Navigate to *Select Setup Option* select *Install Windows Server*, click to agree, and then select *Windows Server 2025 Standard Evaluation (Desktop Experience)* ![WS SETUP](WSSetup.png) ![WSSETUP2](WSSetup2.png)
+13. Navigate to *Select Setup Option* select *Install Windows Server*, click to agree, and then select *Windows Server 2025 Standard Evaluation (Desktop Experience)* ![WS SETUP](WSSetup.png)
 
 14. Accept the license agreement, select the drive to install the operating system on and then click *next*, *install*, and then wait for the installation to finish.
 15. Navigate to the file explorer after initial installation, and select the *CD Drive with the VirtIO Drivers*. Then, double click to run *virtio-win-guest-tools* Agree to all licensing and then install all drivers.![VIRTIO](virtioguest.png)
