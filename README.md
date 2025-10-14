@@ -23,7 +23,7 @@ This article demonstrates the process of adding a Windows Server 2025 Virtual Ma
 
 1. Open Proxmox WebGUI and sign in using appropriate credentials.
 2. Under Server View on left-hand side, click to expand *Datacenter* and then click to expand the appropriate *Node* 
-3.  Click *Create VM*![[VMSelect.png]]
+3.  Click *Create VM* !(./VMSelect.png)
 4. Set *VM ID* to chosen # within standard convention, set a name for the VM under *name* and then click Next
 5. Select *Use CD/DVD disc image file (iso)*, then select the storage device the Windows Server 2025 .iso is stored on, and select the appropriate .iso
 6. Under *Guest OS* on the right-hand side of the OS Tab, change *Type:* to *Microsoft Windows*, *Version* to *11/2022/2025*, and click the box for *Add additional drive for VirtIO drivers*
